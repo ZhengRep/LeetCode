@@ -127,8 +127,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="PathSumInBinaryTree.cpp" />
-    <ClCompile Include="SumRootToLeafNumbers.cpp" />
+    <ClCompile Include="BinaryTree.cpp" />
+    <ClCompile Include="PathSumInBinaryTree.h" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="SumRootToLeafNumbers.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="BinaryTree.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

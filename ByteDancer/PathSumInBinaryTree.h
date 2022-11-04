@@ -3,49 +3,11 @@
 
 路径 不需要从根节点开始，也不需要在叶子节点结束，但是路径方向必须是向下的（只能从父节点到子节点）。
 */
+#pragma once
+#include "BinaryTree.h"
 #include<unordered_map>
-#include<stdio.h>
 
 using namespace std;
-
- struct TreeNode {
-     int val;
-     TreeNode *left;
-     TreeNode *right;
-     TreeNode() : val(0), left(nullptr), right(nullptr) {}
-     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
-     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
-};
-
- typedef TreeNode BinaryTreeNode;
-
- BinaryTreeNode* CreateBinaryTreeNode(int value)
- {
-     BinaryTreeNode* newNode = new BinaryTreeNode;
-     newNode->val = value;
-     newNode->left = NULL;
-     newNode->m_pRight = NULL;
-     return newNode;
- }
-
- void ConnectNodes(BinaryTreeNode* pParentNode, BinaryTreeNode* pLeftChildNode, BinaryTreeNode* pRightChildNode)
- {
-     pParentNode->m_pLeft = pLeftChildNode;
-     pParentNode->m_pRight = pRightChildNode;
- }
-
- void DestroyBinaryTree(BinaryTreeNode* pRoot)
- {
-     if (pRoot == NULL) return;
-     if (pRoot->m_pLeft != NULL) {
-         DestroyBinaryTree(pRoot->m_pLeft);
-     }
-     if (pRoot->m_pRight != NULL) {
-         DestroyBinaryTree(pRoot->m_pRight);
-     }
-     delete pRoot;
-     pRoot = NULL;
- }
  
 class Solution1 {
 public:
@@ -107,19 +69,3 @@ public:
     }
 };
 
-int main()
-{
-    BinaryTreeNode* pNode1 = CreateBinaryTreeNode(1);
-    BinaryTreeNode* pNode2 = CreateBinaryTreeNode(2);
-    BinaryTreeNode* pNode3 = CreateBinaryTreeNode(3);
-    BinaryTreeNode* pNode4 = CreateBinaryTreeNode(4);
-    BinaryTreeNode* pNode5 = CreateBinaryTreeNode(5);
-
-    ConnectNodes(pNode1, pNode2, pNode3);
-    ConnectNodes(pNode2, pNode4, pNode5);
-
-    int result = sumNumbers(pNode1);
-
-    DestroyBinaryTree(pNode1);
-    return 0;
-}

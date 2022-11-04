@@ -8,7 +8,7 @@
 
 叶节点 是指没有子节点的节点。
 */
-
+#pragma once
 #include "BinaryTree.h"
 #include<deque>
 using namespace std;
