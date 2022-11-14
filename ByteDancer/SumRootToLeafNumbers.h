@@ -61,8 +61,8 @@ public:
             return currentValue;
         }
         else {
-            int leftSum = root->left ? DfsAndSum(root->left, currentValue) : 0;
-            int rightSum = root->right ? DfsAndSum(root->right, currentValue) : 0;
+            int leftSum =  DfsAndSum(root->left, currentValue);
+            int rightSum = DfsAndSum(root->right, currentValue);
             return  leftSum + rightSum;
         }
     }

@@ -46,26 +46,26 @@ public:
 
 class Solution2 {
 public:
-    //what is prefex sum
-    unordered_map<long long, int> prefexSum; //sum, index -> to record prefex sum root->p1->p2->pk
-    int DfsAndUpdatePrefexMap(TreeNode* root, long long preSum, int targetSum) {
+    //what is prefix sum
+    unordered_map<long long, int> prefixSum; //sum, index -> to record prefix sum root->p1->p2->pk
+    int DfsAndUpdateprefixMap(TreeNode* root, long long preSum, int targetSum) {
         if (!root) return 0;
         long long currSum = preSum + root->val;
         int ret = 0;
-        if (prefexSum.count(currSum - targetSum)) {
-            ret = prefexSum[currSum - targetSum];
+        if (prefixSum.count(currSum - targetSum)) {
+            ret = prefixSum[currSum - targetSum];
         }
 
-        prefexSum[currSum]++;
-        ret += DfsAndUpdatePrefexMap(root->left, currSum, targetSum);
-        ret += DfsAndUpdatePrefexMap(root->right, currSum, targetSum);
-        prefexSum[currSum]--;
+        prefixSum[currSum]++;
+        ret += DfsAndUpdateprefixMap(root->left, currSum, targetSum);
+        ret += DfsAndUpdateprefixMap(root->right, currSum, targetSum);
+        prefixSum[currSum]--;
 
         return ret;
     }
     int pathSum(TreeNode* root, int targetSum) {
-        prefexSum[0] = 1; //
-        return DfsAndUpdatePrefexMap(root, 0, targetSum);
+        prefixSum[0] = 1; //
+        return DfsAndUpdateprefixMap(root, 0, targetSum);
     }
 };
 

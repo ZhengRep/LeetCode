@@ -1,20 +1,18 @@
+#include<stdio.h>
 
-#include "PathSumInBinaryTree.h"
+#include "MovingAverageFromDataStream.h"
 
 int main()
 {
-    TreeNode* pNode1 = CreateBinaryTreeNode(1);
-    TreeNode* pNode2 = CreateBinaryTreeNode(2);
-    TreeNode* pNode3 = CreateBinaryTreeNode(3);
-    TreeNode* pNode4 = CreateBinaryTreeNode(4);
-    TreeNode* pNode5 = CreateBinaryTreeNode(5);
-
-    ConnectNodes(pNode1, pNode2, pNode3);
-    ConnectNodes(pNode2, pNode4, pNode5);
-
-    Solution2 solution2;
-    int result = solution2.pathSum(pNode1, 6);
-
-    DestroyBinaryTree(pNode1);
+    MovingAverage* obj = new MovingAverage(3);
+    double res;
+    /*res = obj->next(1);
+    res = obj->next(10);
+    res = obj->next(3);
+    res = obj->next(5);*/
+    printf("%f\r\n", obj->next(1));
+    printf("%f\r\n", obj->next(10));
+    printf("%f\r\n", obj->next(3));
+    printf("%f\r\n", obj->next(5));
     return 0;
 }
