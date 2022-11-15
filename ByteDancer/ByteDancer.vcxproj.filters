@@ -15,25 +15,31 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="SumRootToLeafNumbers.h">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="PathSumInBinaryTree.h">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="BinaryTree.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="PathSumInBinaryTree.h">
+      <Filter>Header Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SumRootToLeafNumbers.h">
+      <Filter>Header Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="IntersectionOfTwoLinkedList.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="InverseKthNodeInList.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="BinaryTree.h">
-      <Filter>Source Files</Filter>
+      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="MovingAverageFromDataStream.h">
-      <Filter>Source Files</Filter>
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

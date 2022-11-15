@@ -134,6 +134,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BinaryTree.h" />
+    <ClInclude Include="IntersectionOfTwoLinkedList.h" />
+    <ClInclude Include="InverseKthNodeInList.h" />
     <ClInclude Include="MovingAverageFromDataStream.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
