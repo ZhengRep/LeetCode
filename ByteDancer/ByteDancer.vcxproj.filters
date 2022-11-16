@@ -41,5 +41,8 @@
     <ClInclude Include="MovingAverageFromDataStream.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="KGreatNumInBinaryTree.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
